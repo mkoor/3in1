@@ -87,13 +87,16 @@ namespace _3in1
         private void шрифтToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fontDialog1.ShowDialog();
-            richTextBox1.Font = fontDialog1.Font;
+            richTextBox1.SelectionFont = fontDialog1.Font;
         }
 
         private void цветToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            colorDialog1.ShowDialog();
-            richTextBox1.ForeColor = colorDialog1.Color;
+            if (richTextBox1.SelectionLength > 0)
+            {
+                colorDialog1.ShowDialog();
+                richTextBox1.ForeColor = colorDialog1.Color;
+            }
         }
     }
 }
