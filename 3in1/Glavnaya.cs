@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _3in1
 {
-    public partial class Form1 : Form
+    public partial class Glavnaya : Form
     {
-        public Form1()
+        public Glavnaya()
         {
             InitializeComponent();
             
@@ -28,6 +28,12 @@ namespace _3in1
         {
             Graph graph = new Graph();
             graph.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Text text = new Text();
+            text.Show();
         }
     }
 }
